@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-9">
+    <title>Rental management system</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-theme.min.css">
+    <script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+          if ($.browser.msie && $.browser.version.substr(0,1)<7)
+          {
+			$('li').has('ul').mouseover(function(){
+				$(this).children('ul').show();
+				}).mouseout(function(){
+				$(this).children('ul').hide();
+				})
+          }
+        });        
+    </script>
+
+	<link rel="stylesheet" type="text/css"  href="bill1.css" media="screen">
+                  <link rel="STYLESHEET" type="text/css" href="fg_membersite.css" />
+
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin: auto;
+  }
+  .tip{
+  	float: left;
+  	color: white;
+  	font-size: 1em;
+  	font-weight: bold;
+  	margin:px;
+  }
+  </style>
+</head>
+<body>
+
+<script>
+(function(){
+var bsa = document.createElement('script');
+ bsa.async = true;
+ bsa.src = 'http://www.red-team-design.com/js/adpacks-demo.js';
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+
+
+<div id="border-top" class="h_blue">
+    <span class="tip"><img class='img' src="flags.gif" width="50px">
+	Rental management system
+	</span>
+</div>
+
+<div id="content-box">    
+<ul id="menu">
+	<li><a href="home.html">Home</a></li>
+	
+	<li>
+		<a href="#"> Register</a>	
+    <ul>
+          <li><a href="house.php">HOUSE</a></li>
+          <li><a href="tenant.php">TENANT</a></li>
+          <li><a href="payment.php">PAYMENT</a></li>
+          <li><a href="regitering.php">USERS</a>       
+          </li>
+          
+        </ul> 	
+	</li>
+	<li>
+	    <a href="#">View</a>
+       <ul>
+          <li><a href="viewhouse.php">HOUSE</a></li>
+          <li><a href="viewtenant.php">TENANT</a></li>
+          <li><a href="viewpayment.php">PAYMENT</a></li>
+          <li><a href="viewusers.php">USERS</a>       
+          </li>
+          
+        </ul>	
+			
+	</li>
+	<li>
+    <!-- Trigger the modal with a button -->
+  <a href="#" data-toggle="modal" data-target="#myModal"><img src="icon_plus.png" height=10px>add user&plus;</a>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add USER</h4>
+        </div>
+        <div class="modal-body">
+         
+			 
+		 <div id='fg_membersite'>
+
+<form id='login' action="adduser.php" method='post' accept-charset='UTF-8'>
+<input type='hidden' name='submitted' id='submitted' value='1'/>
+<div class='short_explanation'>* required fields 
+</div>
+
+<div><span class='error'></span></div>
+<div class='container'>
+    <label for='fn' >First Name</label><br/>
+    <input type='text' name='fn' id='fn' "value='' maxlength="50" autofocus /><br/>
+    <span id='add_meter_No_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='ln' >Last Name:</label><br/>
+    <input type='text' name='ln' id='ln' maxlength="50" /><br/>
+    <span id='add_location_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='st' >User Title*:</label></td><td>
+	<select value='title' name='st' id="st"><option></option>
+	<option name='admin'>administrator</option>
+	<option name='member'>member</option>
+	<option name='others'>others</option>
+	</select>
+<div id='register_user_title_errorloc' class='error' style='clear:both'></div>
+</div>
+<div class='container'>
+    <label for='sn' >User Name:</label><br/>
+    <input type='text' name='sn' id='sn' maxlength="50" /><br/>
+    <span id='add_account_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='pw' >Password:</label><br/>
+    <input type='password' name='pw' id='pw' maxlength="50" /><br/>
+    <span id='add_account_errorloc' class='error'></span>
+</div>
+
+<div class='container'>
+    <input type='submit' name='Submit' value='Add' />
+</div>
+<div class='short_explanation'><a href='#'>Edit user?</a>
+</div>
+
+	</form>       
+		  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  	</li>
+	
+	<li>
+	     <a href="viewreport.php">Reports</a>	
+	</li>
+	<li>
+	<a href="logout.php">LOG OUT</a>  
+	</li>
+	</ul>
+	
+	<div class="container">
+	<h5>Welcome:</h5>
+
+<div class="alert alert-success">
+<button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
+<strong>Hello Administrator, your Rental Management system!</strong>
+</div>
+<!--section for slider--->
+<section class="wrap">
+<div class="categorymenu">
+<div class="container">
+  <br>
+  <div id="" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="">
+      <div class="item active">
+        <img src="is.jpg" alt="must" width="50" height="50"36">
+        <div class="carousel-caption">
+        <h4>Rental management system</h4>
+        <p>Kampala City</p>
+      </div>
+</div>
+
+      <div class="item">
+        <img src="partnersplatform.png" alt="ariana2" width="80" height="80">
+       <div class="carousel-caption">
+        <h4>ivan</h4>
+        <p>God is great</p>
+      </div>
+      </div>
+    
+      <div class="item">
+        <img src="is2.jpg" alt="ariana3" width="80" height="80">
+        <div class="carousel-caption">
+        <h4>epou</h4>
+        <p>God is great</p>
+      </div>
+      </div>
+
+      <div class="item">
+       <img src="img1.jpg" alt="img1" width="80" height="80">
+     <div class="carousel-caption">
+      <h4>Rental management system</h4>
+        <p>MUST</p>
+      </div>
+       </div>
+	   <br><br><br>   <br><br><br>   <br><br><br>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+</section>
+ </div>
+<p>
+<a href="#">Rental Management System</a> designed by <a href="#"> Epou &nbsp; Ivan &nbsp; and&nbsp; Martine</a>
+</div>	 	
+	
+<!-- AdPacks.com Ad Code -->
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+(function(){
+var bsa = document.createElement('script');
+ bsa.async = true;
+ bsa.src = 'http://www.red-team-design.com/js/adpacks-demo.js';
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+
+
+<script language="JavaScript">
+
+document.write('Last modified '+document.lastModified);
+
+</script>
+</div>
+<div id="footer">
+
+<div class="copyright">
+<span class="footer">
+
+<script language="JavaScript">
+var today = new Date()
+var year = today.getFullYear();
+document.write('©'+year+' Rental management system');
+</script>
+</span>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
